@@ -1,7 +1,5 @@
 import { Question } from "@/app/typing/question";
 
-export const questions: Question[] = [];
-
 export const genQuestion = () => {
     const data: Question[] = []
     for (let i = 65; i < 85; i++) {
@@ -14,7 +12,10 @@ export const genQuestion = () => {
     return data
 }
 
-export const answers: object = {
-    a: '1',
-    b: '1'
+export const genAnswer = () => {
+    const data: any = {}
+    for (let i = 65; i < 85; i++) {
+        data[String.fromCharCode(i).toLowerCase()] = '1'
+    }
+    return data
 }
